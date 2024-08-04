@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Template Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #2E8B57;
+        }
+        h3 {
+            color: #4682B4;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .field {
+            margin-bottom: 10px;
+        }
+        .field label {
+            display: block;
+            font-weight: bold;
+        }
+        .field input, .field select, .field textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Proposed KYC Template Structure</h2>
+    <form id="kycForm">
+        <div class="section">
+            <h3>I. General Information</h3>
+            <div class="field">
+                <label for="businessName">Business Name:</label>
+                <input type="text" id="businessName" name="businessName" required>
+            </div>
+            <div class="field">
+                <label for="registrationNumber">Registration Number:</label>
+                <input type="text" id="registrationNumber" name="registrationNumber" required>
+            </div>
+            <div class="field">
+                <label for="countryOfIncorporation">Country of Incorporation:</label>
+                <select id="countryOfIncorporation" name="countryOfIncorporation" required>
+                    <!-- Populate with country options -->
+                    <option value="country1">Country 1</option>
+                    <option value="country2">Country 2</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="registeredAddress">Registered Address:</label>
+                <textarea id="registeredAddress" name="registeredAddress" required></textarea>
+            </div>
+            <div class="field">
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website">
+            </div>
+            <div class="field">
+                <label for="industry">Industry:</label>
+                <select id="industry" name="industry" required>
+                    <!-- Populate with industry options -->
+                    <option value="industry1">Industry 1</option>
+                    <option value="industry2">Industry 2</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="natureOfBusiness">Nature of Business:</label>
+                <textarea id="natureOfBusiness" name="natureOfBusiness" required></textarea>
+            </div>
+            <div class="field">
+                <label for="dateOfIncorporation">Date of Incorporation:</label>
+                <input type="date" id="dateOfIncorporation" name="dateOfIncorporation" required>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>II. Beneficial Ownership</h3>
+            <div class="field">
+                <label>UBO 1:</label>
+            </div>
+            <div class="field">
+                <label for="ubo1FullName">Full Name:</label>
+                <input type="text" id="ubo1FullName" name="ubo1FullName" required>
+            </div>
+            <div class="field">
+                <label for="ubo1Nationality">Nationality:</label>
+                <select id="ubo1Nationality" name="ubo1Nationality" required>
+                    <!-- Populate with country options -->
+                    <option value="country1">Country 1</option>
+                    <option value="country2">Country 2</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="ubo1DateOfBirth">Date of Birth:</label>
+                <input type="date" id="ubo1DateOfBirth" name="ubo1DateOfBirth" required>
+            </div>
+            <div class="field">
+                <label for="ubo1ResidentialAddress">Residential Address:</label>
+                <textarea id="ubo1ResidentialAddress" name="ubo1ResidentialAddress" required></textarea>
+            </div>
+            <div class="field">
+                <label for="ubo1PercentageOfOwnership">Percentage of Ownership:</label>
+                <input type="number" step="0.01" id="ubo1PercentageOfOwnership" name="ubo1PercentageOfOwnership" required>
+            </div>
+            <div class="field">
+                <label for="ubo1IDDocumentType">ID Document Type:</label>
+                <select id="ubo1IDDocumentType" name="ubo1IDDocumentType" required>
+                    <!-- Populate with ID document types -->
+                    <option value="passport">Passport</option>
+                    <option value="idCard">ID Card</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="ubo1IDDocumentNumber">ID Document Number:</label>
+                <input type="text" id="ubo1IDDocumentNumber" name="ubo1IDDocumentNumber" required>
+            </div>
+            <div class="field">
+                <label for="ubo1IDDocumentExpirationDate">ID Document Expiration Date:</label>
+                <input type="date" id="ubo1IDDocumentExpirationDate" name="ubo1IDDocumentExpirationDate">
+            </div>
+            <div class="field">
+                <label for="ubo1IDDocumentCopy">ID Document Copy:</label>
+                <input type="file" id="ubo1IDDocumentCopy" name="ubo1IDDocumentCopy">
+            </div>
+            <div class="field">
+                <label for="additionalUBOs">Additional UBOs:</label>
+                <textarea id="additionalUBOs" name="additionalUBOs" placeholder="Use a one2many field to add as needed"></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>III. Legal Structure</h3>
+            <div class="field">
+                <label for="legalForm">Legal Form:</label>
+                <select id="legalForm" name="legalForm" required>
+                    <!-- Populate with legal forms -->
+                    <option value="form1">Form 1</option>
+                    <option value="form2">Form 2</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="jurisdiction">Jurisdiction:</label>
+                <select id="jurisdiction" name="jurisdiction" required>
+                    <!-- Populate with country options -->
+                    <option value="country1">Country 1</option>
+                    <option value="country2">Country 2</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="registrationAuthority">Registration Authority:</label>
+                <input type="text" id="registrationAuthority" name="registrationAuthority">
+            </div>
+            <div class="field">
+                <label for="registrationDate">Registration Date:</label>
+                <input type="date" id="registrationDate" name="registrationDate">
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>IV. Business Activities</h3>
+            <div class="field">
+                <label for="primaryActivity">Primary Activity:</label>
+                <textarea id="primaryActivity" name="primaryActivity" required></textarea>
+            </div>
+            <div class="field">
+                <label for="secondaryActivities">Secondary Activities:</label>
+                <textarea id="secondaryActivities" name="secondaryActivities"></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>V. Financial Information</h3>
+            <div class="field">
+                <label for="annualRevenue">Annual Revenue:</label>
+                <input type="number" step="0.01" id="annualRevenue" name="annualRevenue" required>
+            </div>
+            <div class="field">
+                <label for="currency">Currency:</label>
+                <select id="currency" name="currency" required>
+                    <!-- Populate with currency options -->
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="sourceOfFunds">Source of Funds:</label>
+                <textarea id="sourceOfFunds" name="sourceOfFunds" required></textarea>
+            </div>
+            <div class="field">
+                <label for="auditorInformation">Auditor Information:</label>
+                <textarea id="auditorInformation" name="auditorInformation"></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>VI. AML/CFT</h3>
+            <div class="field">
+                <label for="amlCftPolicy">AML/CFT Policy:</label>
+                <input type="checkbox" id="amlCftPolicy" name="amlCftPolicy">
+            </div>
+            <div class="field">
+                <label for="customerDueDiligence">Customer Due Diligence Procedures:</label>
+                <textarea id="customerDueDiligence" name="customerDueDiligence"></textarea>
+            </div>
+            <div class="field">
+                <label for="transactionMonitoring">Transaction Monitoring Procedures:</label>
+                <textarea id="transactionMonitoring" name="transactionMonitoring"></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>VII. Risk Assessment</h3>
+            <div class="field">
+                <label for="riskRating">Risk Rating:</label>
+                <select id="riskRating" name="riskRating">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="riskFactors">Risk Factors:</label>
+                <textarea id="riskFactors" name="riskFactors"></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>VIII. Documents</h3>
+            <div class="field">
+                <label for="businessRegistrationCertificate">Business Registration Certificate:</label>
+                <input type="file" id="businessRegistrationCertificate" name="businessRegistrationCertificate">
+            </div>
+            <div class="field">
+                <label for="articlesOfIncorporation">Articles of Incorporation:</label>
+                <input type="file" id="articlesOfIncorporation" name="articlesOfIncorporation">
+            </div>
+            <div class="field">
+                <label for="otherDocuments">Other Documents:</label>
+                <input type="file" id="otherDocuments" name="otherDocuments" multiple>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>IX. Declaration</h3>
+            <div class="field">
+                <label for="acceptedTerms">Accepted Terms and Conditions:</label>
+                <input type="checkbox" id="acceptedTerms" name="acceptedTerms" required>
+            </div>
+            <div class="field">
+                <label for="declarationDate">Date:</label>
+                <input type="date" id="declarationDate" name="declarationDate" required>
+            </div>
+            <div class="field">
+                <label for="signature">Signature:</label>
+                <input type="text" id="signature" name="signature">
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('kycForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const formObject = Object.fromEntries(formData.entries());
+
+            console.log('Form Data Submitted:', formObject);
+
+            alert('Form submitted successfully!');
+        });
+    </script>
+</body>
+</html>
